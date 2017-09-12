@@ -31,8 +31,15 @@ public class Calculate {
 	/* This method takes in 3 doubles and averages the 3
 	 */
 	public static double toDegrees(double operand) {
-		double toDegrees= operand * (180/3.14159);
+		double toDegrees= (operand * (3.14159/180));
 		return toDegrees;
-	
 	}
-}
+	/* This method takes in a double of a radian and converts it
+	 * to a degree
+	 */
+	public static double toRadians(double operand) {
+		double toRadians= (operand * (180 * 3.14159));
+		return toRadians;
+	}
+
+ }
