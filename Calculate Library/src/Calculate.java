@@ -45,8 +45,16 @@ public class Calculate {
 	 * to a radian
 	 */
 	public static double discriminant(double operand, double operand2, double operand3) {
-		double dis= operandx^2 + operand2x + operand 3;
+		double dis= operand + operand2 + operand3;
 		return dis;
+	}
+	/*This method takes in three doubles and returns a double to represent a,b, and c
+	 * in the discriminant y=ax^2+bx+c 
+	 */
+	public static String toImproperFrac(int whole, int numerator, int denominator) {
+		int imp= whole + (numerator/denominator);
+		return whole + "/" + denominator;
+	}
 	}
 
  }
