@@ -52,9 +52,8 @@ public class Calculate {
 	 * in the discriminant y=ax^2+bx+c 
 	 */
 	public static String toImproperFrac(int whole, int numerator, int denominator) {
-		int imp= whole + (numerator/denominator);
-		return whole + "/" + denominator;
+		int imp= (whole * denominator) + numerator;
+		return imp + "/" + denominator;
 	}
 	}
 
- }
