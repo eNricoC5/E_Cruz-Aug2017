@@ -55,5 +55,13 @@ public class Calculate {
 		int imp= (whole * denominator) + numerator;
 		return imp + "/" + denominator;
 	}
+	/*This method takes in a mixed number (3 int) and returns a mixed number (1 int)
+	 */
+	public static String toMixedNum(int num, int den) {
+		int mix= num / den;
+		int frac= num % den;
+		return mix + "_" + frac + "/" + den;
+		
+	}
 	}
 
