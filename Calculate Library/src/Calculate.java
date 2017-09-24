@@ -71,6 +71,65 @@ public class Calculate {
 		String quad= firstCoef + e + "^2 + " +secondCoef + e + " " + constantNum;
 		return quad;
 	}
+	/*This method takes in 4 integers and one string to use foil of a factored polynomial
+	 * to simplify it to one whole polynomial
+	 */
+	public static boolean isDivisibleBy(int a, int b) {
+		int Division = a / b;
+		if (Division );
+		System.out.println("True.");
+	} else { 
+		System.out.println("False.");
+	}
+	/*This method takes in two integers and returns a boolean
+	 * to determine whether or no the two can be divided evenly
+	 */
+	public static double absValue(double x) {
+		if (x >= 0) {
+		return x;
+		} else { 
+		System.out.println(x * -1);
+		}
+	}
+	/*This method takes in a double and returns a double of its absolute value
+	 */
+	public static double max(double a, double b) {
+		if (a >= b) {
+		return a;
+		} else {
+		return b;
+		}
+	}
+	/*This method takes in two doubles and determines the max of the two doubles
+	 * which otherwise returns the larger double
+	 */
+	public static double maxOver(double a, double b, double c) {
+		if (a >= b) {
+			return a;
+		} else if (b >= c) {
+			return b;
+		} else if (a >= c) {
+			return a;
+		} else if (c >= a) {
+			return c;
+		}
+	}
+	/* This method overloads max and takes in three doubles and returns 
+	 * the one with the greatest value
+	 */
+	public static int min( int a, int b) {
+		if (a <= b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+	/* This method takes in two integers and returns the smallest of the two 
+	 */
+	public static double round2(double x) {
+		
+	}
 }
+
 
 
