@@ -61,9 +61,10 @@ public class Calculate {
 		int mix= num / den;
 		int frac= num % den;
 		return mix + "_" + frac + "/" + den;
-		}
+	}
 	/*This method takes in an improper fraction (2 int) and returns and mixed numbers (3 int)
 	 */
-	public static String foil(int)
+	public static String foil(int) {
 	}
+}
 
