@@ -64,7 +64,13 @@ public class Calculate {
 	}
 	/*This method takes in an improper fraction (2 int) and returns and mixed numbers (3 int)
 	 */
-	public static String foil(int) {
+	public static String foil(int a, int b, int c, int d, String e) {
+		int firstCoef= a * c;
+		int secondCoef= a * d + b * c;
+		int constantNum= b * d;
+		String quad= firstCoef + e + "^2 + " +secondCoef + e + " " + constantNum;
+		return quad;
 	}
 }
+
 
