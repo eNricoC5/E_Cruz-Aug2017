@@ -127,9 +127,33 @@ public class Calculate {
 	/* This method takes in two integers and returns the smallest of the two 
 	 */
 	public static double round2(double x) {
+			double end = 0.0;
+			int intT = (int)(x * 1000);
+			int numR= intT % 10;
+			intT = intT / 10;
+			if (numR >= 5 && intT > 0)
+				intT++;
+			else if(numR <= -5 && intT < 0)
+				intT--;
+			end = intT / 100.0;
+			return end;
+		}
+	/* this integer takes in one double and rounds it two decimal places to give a double
+	 */
+	public static double exponent(double x, int y) {
+		double exp = y * (x * x);
+		return exp;
+		}
+	/* This method takes in a double and an integer and returns a double.
+	 * It's purpose is to take the double and raise to the power of the positive integer.
+	 */
+	public static int factorial(int a) {
+	}
+	public static boolean isPrime(int a) {
 		
 	}
-}
+	}
+
 
 
 
