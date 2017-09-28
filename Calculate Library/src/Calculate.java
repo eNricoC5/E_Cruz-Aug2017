@@ -148,9 +148,22 @@ public class Calculate {
 	 * It's purpose is to take the double and raise to the power of the positive integer.
 	 */
 	public static int factorial(int a) {
-	}
+		int multiply= 1;
+		if (multiply == 0) {
+			return multiply;
+		}
+		for(int i = 1; i <= a; i++)	{
+			multiply *=i;
+		}
+		return multiply;
+}
+	/*This takes in an integer and returns an integer to give its factorial
+	 */
 	public static boolean isPrime(int a) {
-		
+		int start = 2
+				for(isDivisbleBy.) {
+					
+				}
 	}
 	}
 
