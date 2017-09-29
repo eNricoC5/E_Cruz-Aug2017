@@ -160,10 +160,12 @@ public class Calculate {
 	/*This takes in an integer and returns an integer to give its factorial
 	 */
 	public static boolean isPrime(int a) {
-		int start = 2
-				for(isDivisbleBy.) {
+		for(int i = 2; i< a; i++) {
+			if (isDivisibleBy(a,i)) {
+				return false;
+			}
 					
-				}
+		}
 	}
 	}
 
