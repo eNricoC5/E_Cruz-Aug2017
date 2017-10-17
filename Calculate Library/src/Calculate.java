@@ -44,51 +44,50 @@ public class Calculate {
 	/*This method takes in a double of a degree and conerts it
 	 * to a radian
 	 */
-	public static double discriminant(double operand, double operand2, double operand3) {
-		double dis= operand + operand2 + operand3;
+	public static double discriminant(double a, double b, double c) {
+		double dis= (b * b) - 4 * a * c;
 		return dis;
 	}
 	/*This method takes in three doubles and returns a double to represent a,b, and c
-	 * in the discriminant y=ax^2+bx+c 
-	 */
+	 * and return b^2 - 4ac
 	public static String toImproperFrac(int whole, int numerator, int denominator) {
 		int imp= (whole * denominator) + numerator;
 		return imp + "/" + denominator;
 	}
-	/*This method takes in a mixed number (3 int) and returns an improper (1 int)
+	/*This method takes in a mixed number (3 integer) and returns an improper (1 integer)
 	 */
 	public static String toMixedNum(int num, int den) {
 		int mix= num / den;
 		int frac= num % den;
 		return mix + "_" + frac + "/" + den;
 	}
-	/*This method takes in an improper fraction (2 int) and returns and mixed numbers (3 int)
+	/*This method takes in an improper fraction (2 integer) and returns and mixed numbers (3 integer)
 	 */
 	public static String foil(int a, int b, int c, int d, String e) {
-		int firstCoef= a * c;
-		int secondCoef= a * d + b * c;
-		int constantNum= b * d;
-		String quad= firstCoef + e + "^2 + " +secondCoef + e + " " + constantNum;
-		return quad;
+		int FirstCoef = a * c;
+				int secondCoef =  a * d + b * c;
+				int constantNum = b * d;
+				String quad = FirstCoef + e +"^2 + " +secondCoef + e + " " + constantNum; 
+				return quad;
 	}
 	/*This method takes in 4 integers and one string to use foil of a factored polynomial
 	 * to simplify it to one whole polynomial
 	 */
 	public static boolean isDivisibleBy(int a, int b) {
-		int Division = a / b;
-		if (Division );
-		System.out.println("True.");
+		if (a%b == 0) {
+		return true;
 	} else { 
-		System.out.println("False.");
+		return false;
+	}
 	}
 	/*This method takes in two integers and returns a boolean
-	 * to determine whether or no the two can be divided evenly
+	 * to determine whether or not the two can be divided evenly
 	 */
 	public static double absValue(double x) {
 		if (x >= 0) {
 		return x;
 		} else { 
-		System.out.println(x * -1);
+		return-x;
 		}
 	}
 	/*This method takes in a double and returns a double of its absolute value
@@ -100,7 +99,7 @@ public class Calculate {
 		return b;
 		}
 	}
-	/*This method takes in two doubles and determines the max of the two doubles
+	 /*This method takes in two doubles and determines the max of the two doubles
 	 * which otherwise returns the larger double
 	 */
 	public static double maxOver(double a, double b, double c) {
@@ -113,62 +112,108 @@ public class Calculate {
 		} else if (c >= a) {
 			return c;
 		}
+		return c;
 	}
 	/* This method overloads max and takes in three doubles and returns 
 	 * the one with the greatest value
 	 */
-	public static int min( int a, int b) {
-		if (a <= b) {
-			return a;
-		} else {
-			return b;
-		}
+	 public static int min( int a, int b) {
+	if (a <= b) {
+		return a;
+	} else {
+		return b;
 	}
-	/* This method takes in two integers and returns the smallest of the two 
+	}
+/* This method takes in two integers and returns the smallest of the two 
+ */
+	public static double round2(double x) {	
+		double endValue = 0.0;
+		
+		int intT= (int)(x * 1000);
+		int num = intT % 10;
+		intT = intT / 10;
+		if (num >= 5 && intT > 0)
+			intT++;
+		else if(num <= -5 && intT < 0)
+			intT--;
+		endValue = intT / 100.0;
+		return endValue;
+ }
+	/* This method takes in a double and rounds it two places 
 	 */
-	public static double round2(double x) {
-			double end = 0.0;
-			int intT = (int)(x * 1000);
-			int numR= intT % 10;
-			intT = intT / 10;
-			if (numR >= 5 && intT > 0)
-				intT++;
-			else if(numR <= -5 && intT < 0)
-				intT--;
-			end = intT / 100.0;
-			return end;
-		}
-	/* this integer takes in one double and rounds it two decimal places to give a double
-	 */
-	public static double exponent(double x, int y) {
-		double exp = y * (x * x);
-		return exp;
-		}
-	/* This method takes in a double and an integer and returns a double.
-	 * It's purpose is to take the double and raise to the power of the positive integer.
-	 */
-	public static int factorial(int a) {
+	 public static double exponent(double num, int numPow){
+         double product = 1;
+         for(int i = 0; i < numPow; i++){
+             product *= num;
+         }
+         return product;
+     }
+	 /*This  takes in a double and an int and returns a double
+	  * The loop takes in vaules for the exponent and plugs them in to the power of the base
+	  */
+	public static int factorial(int x) {
 		int multiply= 1;
 		if (multiply == 0) {
 			return multiply;
 		}
-		for(int i = 1; i <= a; i++)	{
+		for(int i = 1; i <= x; i++)	{
 			multiply *=i;
 		}
 		return multiply;
-}
-	/*This takes in an integer and returns an integer to give its factorial
+	}
+	/*
+	 * 
 	 */
-	public static boolean isPrime(int a) {
-		for(int i = 2; i< a; i++) {
-			if (isDivisibleBy(a,i)) {
+	public static boolean isPrime(int integer) {
+		for(int i = 2; i< integer; i++) {
+			if (isDivisibleBy(integer,i)) {
 				return false;
 			}
-					
+		} 
+			return true;
+	}
+			/*This method takes in a integer and returns a boolean to determine 
+			 * if a number is prime (true) or if its not (false).
+			 */
+	public static int gcf(int a, int b) {
+		int i = min(a,b);
+		while(i>= 1) {
+			if((a % i == 0) && (b % i == 0)) {
+				return i;
+			} 
+			i--;
 		}
+		return 1;
+		}
+	
+	 /*This takes in two integers and returns an integer
+	  * the method takes the numbers and determines its greatest common factor
+	  */
+	 public static double sqrt(double num) {
+		 double a;
+		 if (num< 0) {
+			 throw new IllegalArgumentException("Do not accept negative numbers");
+		 }
+		 double squared = num / 2;
+		 
+			do {
+				a = squared;
+				squared = (a + (num / a)) / 2;
+			} while ((a - squared) != 0);
+		 
+			return round2(squared);
+		}
+	 /*this method takes in a double and returns a double
+	  * The point is to take in a number and return a squared version of it
+	  */
+	public static String quadForm(double a, double b, double c) {
+		if (discriminant(a,b,c) < 0.0) {
+			return "no real roots";
+		}
+		return "";
+		//finish the other cases...
+		
 	}
-	}
-
-
+}
 
 
