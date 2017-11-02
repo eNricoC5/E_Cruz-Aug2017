@@ -41,7 +41,7 @@ public class Calculate {
 		double Radians= (operand * (180/3.14159));
 		return Radians;
 	}
-	/*This method takes in a double of a degree and conerts it
+	/*This method takes in a double of a degree and converts it
 	 * to a radian
 	 */
 	public static double discriminant(double a, double b, double c) {
@@ -50,6 +50,7 @@ public class Calculate {
 	}
 	/*This method takes in three doubles and returns a double to represent a,b, and c
 	 * and return b^2 - 4ac
+	 */
 	public static String toImproperFrac(int whole, int numerator, int denominator) {
 		int imp= (whole * denominator) + numerator;
 		return imp + "/" + denominator;
@@ -206,14 +207,22 @@ public class Calculate {
 	 /*this method takes in a double and returns a double
 	  * The point is to take in a number and return a squared version of it
 	  */
-	public static String quadForm(double a, double b, double c) {
-		if (discriminant(a,b,c) < 0.0) {
+	public static String quadForm(int a, int b, int c) {
+		if (discriminant(a,b,c) < 0) {
 			return "no real roots";
-		}
-		return "";
-		//finish the other cases...
-		
+		} else if(discriminant(a, b, c) == 0){
+            double singleRoot = round2(-b / (double)(2 * a));
+            String answer = "(" + singleRoot + " , " + "0)";
+            return answer;
+        }
+        else{
+        	double positiveQuad = round2((-b + (sqrt(discriminant(a,b,c)))) / (2*a));
+        	double negativeQuad = round2((-b - (sqrt(discriminant(a,b,c)))) / (2*a));
+        	String answer ="(" + negativeQuad + " , " + positiveQuad + ")";
+        		return answer;
+        }
 	}
 }
+
 
 
