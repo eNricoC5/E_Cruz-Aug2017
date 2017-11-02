@@ -1,13 +1,16 @@
 import java.util.*;
 
 public class Split {
-public static void main(String[] args) {
+ public static String Part0(String example1, String example2, String example3) {
+	 example1 = "I like apples!";
+	 example2 = "I really like really red apples";
+	 example3 = "I reallyreally likeapples";
+System.out.println(Arrays.toString(example1.split(" ")));
 
-System.out.println(Arrays.toString("I like apples!".split(" ")));
+System.out.println(Arrays.toString(example2.split("really")));
 
-System.out.println(Arrays.toString("I really like really red apples".split("really")));
-
-System.out.println(Arrays.toString("I reallyreally likeapples".split("really")));
+System.out.println(Arrays.toString(example3.split("really")));
+ }
 
 String sandwich = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
 		System.out.println(Arrays.toString(sandwich.split("bread")));
@@ -38,6 +41,10 @@ String sandwich = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 */
+public String Part1(String input) {
+	input = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
+	String[] sandwich = input.split(" ");
+	
 
 
 
