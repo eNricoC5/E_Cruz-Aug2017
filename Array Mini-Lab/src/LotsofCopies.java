@@ -28,11 +28,11 @@ public static void changeMe(int x, String str, int[] arr) {
 	str = "hello sir";
 	System.out.println("Bstr: " + bStr);
 	
-	int[] Barr = arr;
-	for (int i= 0; i<arr.length; i++) {
-		arr[i]=5;
+	//int[] Barr = arr;
+	//for (int i= 0; i<arr.length; i++) {
+	//	arr[i]=5;
 	}
-	System.out.println("Barr: " + Arrays.toString(Barr));
+	//System.out.println("Barr: " + Arrays.toString(Barr));
 }
-}
+//}
 

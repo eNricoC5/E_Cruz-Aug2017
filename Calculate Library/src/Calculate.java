@@ -104,17 +104,15 @@ public class Calculate {
 	 * which otherwise returns the larger double
 	 */
 	public static double maxOver(double a, double b, double c) {
-		if (a >= b) {
-			return a;
-		} else if (b >= c) {
-			return b;
-		} else if (a >= c) {
-			return a;
-		} else if (c >= a) {
-			return c;
-		}
-		return c;
-	}
+		double maximum = a;
+        if(b > a){
+            maximum = b;
+        }
+        if(c > b){
+            maximum = c;
+        }
+        return maximum;
+    }
 	/* This method overloads max and takes in three doubles and returns 
 	 * the one with the greatest value
 	 */

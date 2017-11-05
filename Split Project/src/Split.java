@@ -1,3 +1,6 @@
+/*Enrico Cruz
+ * October 5th 2017
+ */
 import java.util.*;
 
 public class Split {
@@ -37,7 +40,7 @@ System.out.println(Arrays.toString("I reallyreally likeapples".split("really")))
 */
 public String Part1(String input) {
 	input = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
-	String[] sandwich = input.split(" ");
+	String[] sandwich = input.split("bread");
 	
 
 
