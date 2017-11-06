@@ -26,7 +26,13 @@ assert (arr1.length == arr2.length);
 */
 public static int[] append(int[] arr, int num) {
 assert (arr.length > 0);
-
+num = 6;
+int[] appendedArr= new int[arr.length];
+for (int i= 0; i <arr.length-1; i++) {
+	arr[i] = arr[i+1];
+	}
+arr[arr.length-1]=num;
+return appendedArr;
 }
 
 /*
@@ -37,7 +43,9 @@ assert (arr.length > 0);
 */
 public static int[] remove(int[] arr, int idx) {
 assert (arr.length >= 2);
-
+idx = arr[arr.length-1];
+int[] arrR = new int[arr.length];
+for (int i; i)
 }
 
 /*
@@ -47,7 +55,6 @@ assert (arr.length >= 2);
 */
 public static int sumEven(int[] arr) {
 assert (arr.length > 0);
-
 }
 
 /*
@@ -60,6 +67,12 @@ assert (arr.length > 0);
 public static void rotateRight(int[] arr) {
 assert (arr.length > 0);
 
+int last= arr[arr.length-1];
+for (int i= arr.length-1; i >= 1; i--) {
+	arr[i] = arr[i-1];
+	}
+arr[0] = last;
+System.out.println(Array.toString(arr));
 }
 
 /*

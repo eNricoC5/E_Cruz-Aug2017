@@ -31,15 +31,13 @@ public class Calculate {
 	/* This method takes in 3 doubles and averages the 3
 	 */
 	public static double toDegrees(double operand) {
-		double Degrees= (operand * (3.14159/180));
-		return Degrees;
+		return (operand * (180/3.14159));
 	}
 	/* This method takes in a double of a radian and converts it
 	 * to a degree
 	 */
 	public static double toRadians(double operand) {
-		double Radians= (operand * (180/3.14159));
-		return Radians;
+		return (operand * (3.14159/180));
 	}
 	/*This method takes in a double of a degree and converts it
 	 * to a radian
@@ -216,7 +214,7 @@ public class Calculate {
         else{
         	double positiveQuad = round2((-b + (sqrt(discriminant(a,b,c)))) / (2*a));
         	double negativeQuad = round2((-b - (sqrt(discriminant(a,b,c)))) / (2*a));
-        	String answer ="(" + negativeQuad + " , " + positiveQuad + ")";
+        	String answer ="(" + negativeQuad + ", 0" + ") and (" + positiveQuad + ", 0)";
         		return answer;
         }
 	}
