@@ -26,12 +26,11 @@ assert (arr1.length == arr2.length);
 */
 public static int[] append(int[] arr, int num) {
 assert (arr.length > 0);
-num = 6;
-int[] appendedArr= new int[arr.length];
-for (int i= 0; i <arr.length-1; i++) {
-	arr[i] = arr[i+1];
+int[] appendedArr= new int[arr.length+1];
+for (int i= 0; i <arr.length; i++) {
+	appendedArr[i] = arr[i];
 	}
-arr[arr.length-1]=num;
+appendedArr[arr.length]=num;
 return appendedArr;
 }
 
@@ -43,9 +42,15 @@ return appendedArr;
 */
 public static int[] remove(int[] arr, int idx) {
 assert (arr.length >= 2);
-idx = arr[arr.length-1];
-int[] arrR = new int[arr.length];
-for (int i; i)
+int[] arrR = new int[arr.length-1];
+for (int i=0; i < arr.length-1; i++) {
+	if (i <idx) {
+	arrR[i] = arr[i];
+} else {
+	arrR[i] = arr[i+1];
+		}
+	}
+return arrR;
 }
 
 /*
@@ -55,6 +60,8 @@ for (int i; i)
 */
 public static int sumEven(int[] arr) {
 assert (arr.length > 0);
+int sum = 0;
+for (int i= 0; )
 }
 
 /*
@@ -65,14 +72,13 @@ assert (arr.length > 0);
 * You can assume arr has at least one element.
 */
 public static void rotateRight(int[] arr) {
-assert (arr.length > 0);
+t assert (arr.length > 0);
 
 int last= arr[arr.length-1];
 for (int i= arr.length-1; i >= 1; i--) {
 	arr[i] = arr[i-1];
 	}
 arr[0] = last;
-System.out.println(Array.toString(arr));
 }
 
 /*
@@ -99,6 +105,26 @@ a1
 */
 
 public static void main(String[] args) {
+int[] a1 = {5,10,15,20,25,30,35,40};
+int[] a2 = {7,14,21,28,35,42,49,56};
+int appendNum = 200;
+int removeIdx = 5;
+
+int[] sumArr = sum(a1,a2);
+System.out.println(Arrays.toString(sumArr));
+ 
+int[] appendArr= append(a1,appendNum);
+System.out.println(Arrays.toString(appendArr));
+
+int[] removeArr = remove(a2,removeIdx);
+System.out.println(Arrays.toString(removeArr));
+
+int[] sumOfevens = sumEvens(appendArr);
+System.out.println(Arrays.toString(sumOfevens));
+
+System.out.println(rotateRight(a1));
+
+
 
 	}
 }

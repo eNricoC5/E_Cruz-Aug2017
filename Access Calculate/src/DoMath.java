@@ -27,6 +27,7 @@ public class DoMath {
         System.out.println(Calculate.gcf(4, 16));
         System.out.println(Calculate.sqrt(3));
         
+        
 	}
 
 }
