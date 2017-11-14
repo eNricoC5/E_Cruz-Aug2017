@@ -11,18 +11,18 @@ public class FracCalc {
 
     public static void main(String[] args) {
         // TODO: Read the input from the user and call produceAnswer with an equation
-    	String input= "";
-    	String Value= "";
-    	String done= "";
     	Scanner userInput =new Scanner(System.in);
+    	String done = "";
+    	
     	do {
     	System.out.println("Enter Input: ");
-    	input= userInput.next();
+        String input= userInput.nextLine();
+        
+    	System.out.println(produceAnswer(input));
     	
-    	Value = produceAnswer(input);
+    	System.out.println("Do you want to keep going? (Type \"quit\" to end)");
+    	done = userInput.nextLine();
     	
-    	System.out.println("Do you want to keep going? (Type \"quit\" to end");
-    	done = userInput.next();
     	} while (!done.equals("quit"));
     	userInput.close();
     	}
@@ -37,10 +37,18 @@ public class FracCalc {
     //      e.g. return ==> "1_1/4"
     public static String produceAnswer(String input) { 
         // TODO: Implement this function to produce the solution to the input
+    	String[] fullArray= input.split(" ");
+    	
+    	String firstNum= fullArray[0];
+    	String operator= fullArray[1];
+    	String secondNum= fullArray[2];
 
-        return "";
-    }
-
-    // TODO: Fill in the space below with any helper methods that you think you will need
-    
+        return secondNum;
+    }	
+    public static String superAnswer(String input) {
+	
+    String[] firstSplit = (firstNum.split("_"));
+	String fWhole = firstSplit[0];
+	String[] firstExpand = firstSplit.split("/");
+}
 }
