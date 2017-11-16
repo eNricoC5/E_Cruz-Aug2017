@@ -43,12 +43,20 @@ public class FracCalc {
     	String operator= fullArray[1];
     	String secondNum= fullArray[2];
 
-        return secondNum;
+        return splitOperands(secondNum);
     }	
-    public static String superAnswer(String input) {
+    public static String splitOperands(String input2) {
+    	produceAnswer(input2);
+    	if (input.contains("_") && ())
+    	String[] firstSplit = (input2.split("_"));
+    	String fW= firstSplit[0];
+    	String fFrac = firstSplit[1];
+    	String[] firstExpand = (fFrac.split("/"));
+    	String fNum = firstExpand[0];
+    	String fDen = firstExpand[1];
+  
+	String fullFrac = "whole:" + fW + " numerator:" + fNum + " Denominator:" + fDen;
 	
-    String[] firstSplit = (firstNum.split("_"));
-	String fWhole = firstSplit[0];
-	String[] firstExpand = firstSplit.split("/");
-}
+	return fullFrac;
+	}
 }
