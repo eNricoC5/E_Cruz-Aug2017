@@ -39,24 +39,34 @@ public class FracCalc {
         // TODO: Implement this function to produce the solution to the input
     	String[] fullArray= input.split(" ");
     	
-    	String firstNum= fullArray[0];
-    	String operator= fullArray[1];
+    	//String firstNum= fullArray[0];
+    	//String operator= fullArray[1];
     	String secondNum= fullArray[2];
 
         return splitOperands(secondNum);
     }	
     public static String splitOperands(String input2) {
-    	produceAnswer(input2);
-    	if (input.contains("_") && ())
-    	String[] firstSplit = (input2.split("_"));
-    	String fW= firstSplit[0];
-    	String fFrac = firstSplit[1];
-    	String[] firstExpand = (fFrac.split("/"));
-    	String fNum = firstExpand[0];
-    	String fDen = firstExpand[1];
+    	if (input2.contains("_") && (input2.contains("/"))) {
+	    	String[] firstSplit = (input2.split("_"));
+	    	String fW= firstSplit[0];
+	    	String fFrac = firstSplit[1];
+	    	String[] firstExpand = (fFrac.split("/"));
+	    	String fNum = firstExpand[0];
+	    	String fDen = firstExpand[1];
   
-	String fullFrac = "whole:" + fW + " numerator:" + fNum + " Denominator:" + fDen;
-	
-	return fullFrac;
+	String mixFrac = "whole:" + fW + " numerator:" + fNum + " Denominator:" + fDen;
+
+	return mixFrac;
+    	}
+    	else if (input2.contains ("/")) {
+    		String[] firstSplit = (input2.split("/"));
+    		String fNum = firstSplit[0];
+    		String fDen = firstSplit[1];
+    		String normFrac = "numerator:" + fNum + " denominator:" + fDen;
+    		return normFrac;
+    	} else {
+    		String wholeNum = "whole:" + input2;
+    		return wholeNum;
+    	}
 	}
 }
