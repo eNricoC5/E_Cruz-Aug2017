@@ -39,8 +39,8 @@ public class FracCalc {
         // TODO: Implement this function to produce the solution to the input
     	String[] fullArray= input.split(" ");
     	
-    	//String firstNum= fullArray[0];
-    	//String operator= fullArray[1];
+    	String firstNum= fullArray[0];
+    	String operator= fullArray[1];
     	String secondNum= fullArray[2];
 
         return splitOperands(secondNum);
@@ -54,7 +54,7 @@ public class FracCalc {
 	    	String fNum = firstExpand[0];
 	    	String fDen = firstExpand[1];
   
-	String mixFrac = "whole:" + fW + " numerator:" + fNum + " Denominator:" + fDen;
+	String mixFrac = "whole:" + fW + " numerator:" + fNum + " denominator:" + fDen;
 
 	return mixFrac;
     	}
@@ -62,10 +62,10 @@ public class FracCalc {
     		String[] firstSplit = (input2.split("/"));
     		String fNum = firstSplit[0];
     		String fDen = firstSplit[1];
-    		String normFrac = "numerator:" + fNum + " denominator:" + fDen;
+    		String normFrac = "whole:" + 0 + " numerator:" + fNum + " denominator:" + fDen;
     		return normFrac;
     	} else {
-    		String wholeNum = "whole:" + input2;
+    		String wholeNum = "whole:" + input2 + " numerator:" + 0 + " denominator:" + 1;
     		return wholeNum;
     	}
 	}
