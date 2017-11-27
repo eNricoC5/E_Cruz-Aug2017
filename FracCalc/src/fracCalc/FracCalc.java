@@ -1,6 +1,7 @@
 /*Enrico Cruz
  * 11/7/17
- * This is FracCalc which
+ * This is FracCalc which takes in two fractions (mixed number or improper fraction)
+ * and multiply/divides/adds/or  subtracts them. Returning a simplified version.
  */
 package fracCalc;
 
@@ -42,8 +43,10 @@ public class FracCalc {
     	String firstNum= fullArray[0];
     	String operator= fullArray[1];
     	String secondNum= fullArray[2];
+    	
+    	String[] mathArray= fullArray.split(operator);
 
-        return splitOperands(secondNum);
+        return splitOperands(mathArray);
     }	
     public static String splitOperands(String input2) {
     	if (input2.contains("_") && (input2.contains("/"))) {
@@ -69,4 +72,7 @@ public class FracCalc {
     		return wholeNum;
     	}
 	}
+    public static int addSub(String input3) {
+    	
+    }
 }
